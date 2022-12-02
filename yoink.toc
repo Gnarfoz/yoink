@@ -1,0 +1,5 @@
+## Interface: 100002
+## Title: Yoink!
+## Notes: Better be quick
+
+yoink.lua
