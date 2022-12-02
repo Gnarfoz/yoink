@@ -7,6 +7,8 @@ frame:SetScript("OnEvent", function(self, event, arg1, ...)
             StaticPopup_Hide("PARTY_INVITE")
         elseif event == "INCOMING_SUMMON_CHANGED" and arg1=="player" then
             C_SummonInfo.ConfirmSummon()
+        elseif event == "PLAYER_ENTERING_WORLD" then
+            C_PartyInfo.LeaveParty()
         end
     end
 )
@@ -14,3 +16,4 @@ frame:SetScript("OnEvent", function(self, event, arg1, ...)
 frame:RegisterEvent("PARTY_INVITE_REQUEST")
 frame:RegisterEvent("GROUP_ROSTER_UPDATE")
 frame:RegisterEvent("INCOMING_SUMMON_CHANGED")
+frame:RegisterEvent("PLAYER_ENTERING_WORLD")
